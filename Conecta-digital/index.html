@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Conecta Digital</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-[#0a192f] text-white flex flex-col min-h-screen">
+
+  <!-- Cabeçalho com logo -->
+  <header class="flex items-center justify-center space-x-4 py-6 bg-[#112240] shadow-md">
+    <img src="./assets/WhatsApp Image 2025-05-24 at 21.46.33.jpeg" alt="Logo Conecta Digital" class="w-12 h-12 rounded-full shadow cursor-pointer" onclick="window.location.href='index.html'" />
+    <h1 class="text-3xl font-bold text-[#c0f500] cursor-pointer" onclick="window.location.href='index.html'">Conecta Digital</h1>
+  </header>
+
+  <!-- Navegação -->
+  <nav class="flex justify-center space-x-6 bg-[#112240] py-4">
+    <button onclick="mostrarSecao('sobre')" class="text-white hover:text-[#c0f500] transition-colors">Sobre</button>
+    <button onclick="mostrarSecao('servicos')" class="text-white hover:text-[#c0f500] transition-colors">Serviços</button>
+    <button onclick="mostrarSecao('blog')" class="text-white hover:text-[#c0f500] transition-colors">Blog</button>
+    <button onclick="mostrarSecao('faq')" class="text-white hover:text-[#c0f500] transition-colors">FAQ</button>
+  </nav>
+
+  <!-- Conteúdo principal -->
+  <main class="flex flex-1 p-6 bg-[#0a192f]">
+    <!-- Aside para serviços -->
+    <aside id="menu-servicos" class="hidden w-48 bg-[#112240] bg-opacity-90 p-4 rounded shadow-md">
+      <h3 class="text-lg font-semibold text-[#c0f500] mb-4">Nossos Serviços</h3>
+      <ul class="space-y-2">
+        <li><a href="./consultoria.html" class="hover:text-[#c0f500] transition-colors cursor-pointer">Consultoria</a></li>
+        <li><a href="./desenvolvimento.html" class="hover:text-[#c0f500] transition-colors cursor-pointer">Desenvolvimento Web</a></li>
+        <li><a href="./marketing.html" class="hover:text-[#c0f500] transition-colors cursor-pointer">Marketing Digital</a></li>
+      </ul>
+    </aside>
+
+    <!-- Seções -->
+    <section class="flex-1 bg-[#112240] bg-opacity-90 p-6 rounded-lg max-w-5xl mx-auto mt-10">
+      
+      <!-- SOBRE -->
+      <div id="sobre" class="secao">
+        <h2 class="text-2xl font-bold text-[#c0f500]">Sobre</h2>
+        <p class="mt-2 mb-6 text-gray-200">Somos uma agência criativa especializada em soluções digitais.</p>
+
+        <!-- Endereço -->
+        <div class="mb-6 text-gray-300">
+          <h3 class="text-xl font-semibold text-[#a8d05d] mb-2">Endereço da Empresa</h3>
+          <p>Conecta Digital</p>
+          <p>Av. Aguanabi, 123</p>
+          <p>Bairro: Fátima, Fortaleza - CE</p>
+          <p>CEP: 01234-567</p>
+        </div>
+
+        <!-- Tabela de Contato -->
+        <div class="overflow-x-auto">
+          <table class="min-w-full bg-[#0f1a2b] rounded-md shadow-md">
+            <thead class="bg-[#0a1420] text-[#a8d05d]">
+
+              <tr>
+                <h3 class="text-xl font-semibold text-[#a8d05d] mb-2">Contato</h3>
+                <th class="py-2 px-4 text-left">Nome</th>
+                <th class="py-2 px-4 text-left">Email</th>
+                <th class="py-2 px-4 text-left">Telefone</th>
+                <th class="py-2 px-4 text-left">Mensagem</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="py-2 px-4 bg-[#112240]">
+                  <input id="nome" type="text" placeholder="Seu nome" class="w-full p-2 rounded text-black" />
+                </td>
+                <td class="py-2 px-4 bg-[#112240]">
+                  <input id="email" type="email" placeholder="seu@email.com" class="w-full p-2 rounded text-black" />
+                </td>
+                <td class="py-2 px-4 bg-[#112240]">
+                  <input id="telefone" type="tel" placeholder="(00) 00000-0000" class="w-full p-2 rounded text-black" />
+                </td>
+                <td class="py-2 px-4 bg-[#112240]">
+                  <input id="mensagem" type="text" placeholder="Digite sua mensagem" class="w-full p-2 rounded text-black" />
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+          <!-- Botão Enviar -->
+          <div class="text-right mt-4">
+            <button onclick="enviarFormulario()" class="bg-[#c0f500] hover:bg-[#a8d05d] text-[#0a192f] font-semibold py-2 px-6 rounded transition-colors">
+              Enviar
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- SERVIÇOS -->
+      <div id="servicos" class="secao hidden">
+        <h2 class="text-2xl font-bold text-[#c0f500]">Serviços</h2>
+        <p class="mt-2 text-gray-200">Oferecemos serviços personalizados para o seu negócio crescer online.</p>
+      </div>
+
+      <!-- BLOG -->
+      <div id="blog" class="secao hidden">
+        <h2 class="text-2xl font-bold text-[#c0f500]">Blog</h2>
+        <p class="mt-2 text-gray-200">Leia nossos artigos sobre tendências, tecnologia e marketing.</p>
+      </div>
+
+      <!-- FAQ -->
+      <div id="faq" class="secao hidden">
+        <h2 class="text-2xl font-bold text-[#c0f500]">FAQ</h2>
+        <p class="mt-2 text-gray-200">Tire suas dúvidas sobre nossos serviços e processos.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="bg-[#112240] text-[#c0f500] text-center py-4">
+    &copy; 2025 Conecta Digital. Todos os direitos reservados.
+  </footer>
+
+  <!-- Script -->
+  <script>
+    function mostrarSecao(secaoId) {
+      const secoes = document.querySelectorAll('.secao');
+      secoes.forEach(secao => secao.classList.add('hidden'));
+      document.getElementById(secaoId).classList.remove('hidden');
+
+      const aside = document.getElementById('menu-servicos');
+      aside.classList.toggle('hidden', secaoId !== 'servicos');
+    }
+
+    function enviarFormulario() {
+      const nome = document.getElementById('nome').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const telefone = document.getElementById('telefone').value.trim();
+      const mensagem = document.getElementById('mensagem').value.trim();
+
+      if (nome && email && telefone && mensagem) {
+        alert(`Obrigado, ${nome}! Sua mensagem foi enviada com sucesso.`);
+      } else {
+        alert("Por favor, preencha todos os campos antes de enviar.");
+      }
+    }
+
+    // Mostrar seção Sobre por padrão ao carregar
+    mostrarSecao('sobre');
+  </script>
+
+</body>
+</html>
