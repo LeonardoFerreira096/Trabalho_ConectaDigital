@@ -21,8 +21,7 @@
   <!-- Navegação -->
   <nav class="flex justify-center space-x-6 bg-[#112240] py-4">
     <button onclick="mostrarSecao('sobre')" class="text-white hover:text-[#c0f500] transition-colors">Sobre</button>
-    <button onclick="mostrarSecao('servicos')"
-      class="text-white hover:text-[#c0f500] transition-colors">Serviços</button>
+    <button onclick="mostrarSecao('servicos')" class="text-white hover:text-[#c0f500] transition-colors">Serviços</button>
     <button onclick="mostrarSecao('blog')" class="text-white hover:text-[#c0f500] transition-colors">Blog</button>
     <button onclick="mostrarSecao('faq')" class="text-white hover:text-[#c0f500] transition-colors">FAQ</button>
   </nav>
@@ -33,50 +32,41 @@
     <aside id="menu-servicos" class="hidden w-48 bg-[#112240] bg-opacity-90 p-4 rounded shadow-md">
       <h3 class="text-lg font-semibold text-[#c0f500] mb-4">Nossos Serviços</h3>
       <ul class="space-y-2">
-        <li><a href="./consultoria.html" class="hover:text-[#c0f500] transition-colors cursor-pointer">Consultoria</a>
-        </li>
-        <li><a href="./desenvolvimento.html"
-            class="hover:text-[#c0f500] transition-colors cursor-pointer">Desenvolvimento Web</a></li>
-        <li><a href="./marketing.html" class="hover:text-[#c0f500] transition-colors cursor-pointer">Marketing
-            Digital</a></li>
+        <li><a href="consultoria.html" class="hover:text-[#c0f500] transition-colors cursor-pointer">Consultoria</a></li>
+        <li><a href="desenvolvimento.html" class="hover:text-[#c0f500] transition-colors cursor-pointer">Desenvolvimento Web</a></li>
+        <li><a href="marketing.html" class="hover:text-[#c0f500] transition-colors cursor-pointer">Marketing Digital</a></li>
       </ul>
     </aside>
 
-    <!-- Seções -->
+    <!-- Seçoes -->
     <section class="flex-1 bg-[#112240] bg-opacity-90 p-6 rounded-lg max-w-5xl mx-auto mt-10">
 
       <!-- SOBRE -->
       <div id="sobre" class="secao">
         <h2 class="text-2xl font-bold text-[#c0f500] mb-4">Sobre</h2>
 
-        <!-- Texto + Imagem lado a lado -->
         <div class="flex flex-col lg:flex-row gap-8 items-start mb-10">
-          <!-- Texto e Endereço -->
           <div class="flex-1">
             <p class="mb-6 text-gray-200">Somos uma agência criativa especializada em soluções digitais.</p>
 
-            <div class="flex flex-col min-h-screen">
-              <!-- Outros conteúdos do site -->
-
-              <div class="mt-auto text-white p-4">
-                <h3 class="text-lg font-bold text-[#c0f500]">Endereço da Empresa</h3>
-                <p>
-                  Conecta Digital<br>
-                  Av. Aguanabi, 123<br>
-                  Bairro: Fátima, Fortaleza - CE<br>
-                  CEP: 01234-567
-                </p>
-              </div>
+            <div class="mt-auto text-white p-4">
+              <h3 class="text-lg font-bold text-[#c0f500]">Endereço da Empresa</h3>
+              <p>
+                Conecta Digital<br>
+                Av. Aguanabi, 123<br>
+                Bairro: Fátima, Fortaleza - CE<br>
+                CEP: 01234-567
+              </p>
             </div>
           </div>
 
           <!-- Imagem -->
           <div class="flex-1">
-            <img src="./assets/do-utilizador (1).png" alt="Equipe Conecta Digital" class="rounded-lg shadow-lg w-[100%]" />
+            <img src="./assets/do-utilizador (1).png" alt="Equipe Conecta Digital" class="rounded-lg shadow-lg w-full" />
           </div>
         </div>
 
-        <!-- Formulário de Contato -->
+        <!-- Formulário -->
         <div class="overflow-x-auto">
           <h3 class="text-xl font-semibold text-[#a8d05d] mb-2">Contato</h3>
           <table class="min-w-full bg-[#0f1a2b] rounded-md shadow-md">
@@ -90,27 +80,17 @@
             </thead>
             <tbody>
               <tr>
-                <td class="py-2 px-4 bg-[#112240]">
-                  <input id="nome" type="text" placeholder="Seu nome" class="w-full p-2 rounded text-black" />
-                </td>
-                <td class="py-2 px-4 bg-[#112240]">
-                  <input id="email" type="email" placeholder="seu@email.com" class="w-full p-2 rounded text-black" />
-                </td>
-                <td class="py-2 px-4 bg-[#112240]">
-                  <input id="telefone" type="tel" placeholder="(00) 00000-0000" class="w-full p-2 rounded text-black" />
-                </td>
-                <td class="py-2 px-4 bg-[#112240]">
-                  <input id="mensagem" type="text" placeholder="Digite sua mensagem"
-                    class="w-full p-2 rounded text-black" />
-                </td>
+                <td class="py-2 px-4 bg-[#112240]"><input id="nome" type="text" placeholder="Seu nome" class="w-full p-2 rounded text-black" /></td>
+                <td class="py-2 px-4 bg-[#112240]"><input id="email" type="email" placeholder="seu@email.com" class="w-full p-2 rounded text-black" /></td>
+                <td class="py-2 px-4 bg-[#112240]"><input id="telefone" type="tel" placeholder="(00) 00000-0000" class="w-full p-2 rounded text-black" /></td>
+                <td class="py-2 px-4 bg-[#112240]"><input id="mensagem" type="text" placeholder="Digite sua mensagem" class="w-full p-2 rounded text-black" /></td>
               </tr>
             </tbody>
           </table>
 
           <!-- Botão Enviar -->
           <div class="text-right mt-4">
-            <button onclick="enviarFormulario()"
-              class="bg-[#c0f500] hover:bg-[#a8d05d] text-[#0a192f] font-semibold py-2 px-6 rounded transition-colors">
+            <button onclick="enviarFormulario()" class="bg-[#c0f500] hover:bg-[#a8d05d] text-[#0a192f] font-semibold py-2 px-6 rounded transition-colors">
               Enviar
             </button>
           </div>
@@ -142,15 +122,12 @@
     &copy; 2025 Conecta Digital. Todos os direitos reservados.
   </footer>
 
-  <!-- Script -->
+  <!-- Scripts -->
   <script>
     function mostrarSecao(secaoId) {
-      const secoes = document.querySelectorAll('.secao');
-      secoes.forEach(secao => secao.classList.add('hidden'));
+      document.querySelectorAll('.secao').forEach(secao => secao.classList.add('hidden'));
       document.getElementById(secaoId).classList.remove('hidden');
-
-      const aside = document.getElementById('menu-servicos');
-      aside.classList.toggle('hidden', secaoId !== 'servicos');
+      document.getElementById('menu-servicos').classList.toggle('hidden', secaoId !== 'servicos');
     }
 
     function enviarFormulario() {
@@ -166,7 +143,6 @@
       }
     }
 
-    // Mostrar seção Sobre por padrão ao carregar
     mostrarSecao('sobre');
   </script>
 
